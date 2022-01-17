@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="acbcaf24-52f5-4128-b206-72a7a9db03dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins/conf/jenkins.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/conf/jenkins.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins/conf/jobs/job1.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/conf/jobs/job1.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins/conf/jobs/job1_pipeline.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/conf/jobs/job1_pipeline.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

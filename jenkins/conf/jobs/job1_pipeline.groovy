@@ -1,5 +1,4 @@
 #!groovy
-
 pipeline {
     agent any
     tools {
@@ -54,6 +53,13 @@ pipeline {
             }
             steps {
                 sh 'mvn verify'
+            }
+        }
+        stage('renommage') {
+            steps {
+                script {
+                    sh "mv sb3t-ws/tagert/sb3t-ws-1.0-SNAPSHOT.jar sb3t-${params.version}-${params.version_type}.jar"
+                }
             }
         }
     }

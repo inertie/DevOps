@@ -1,6 +1,6 @@
 #!groovy
-println('------------------------------------------------------------------Import Job CI/Job1')
-def pipelineScript = new File('/var/jenkins_config/jobs/job1-pipeline.groovy').getText("UTF-8")
+
+def Script_job1Pipeline = new File('/var/jenkins_config/jobs/job1_pipeline.groovy').getText("UTF-8")
 
 pipelineJob('CI/Job1') {
     description("Job pipeline 1")
@@ -20,12 +20,23 @@ pipelineJob('CI/Job1') {
         booleanParam{
             name('test')
             defaultValue(true)
-            description("sauter les tests")
+            description("")
+        }
+        choix {
+            name('type')
+            choices(['SNAPSHOT', 'RELEASE'])
+            description('quel type ?')
+        }
+        stringParam{
+            name('version')
+            defaultValue('1')
+            description("la version du projet")
+            trim(false)
         }
     }
     definition {
         cps {
-            script(pipelineScript)
+            script(Script_job1Pipeline)
             sandbox()
         }
     }
